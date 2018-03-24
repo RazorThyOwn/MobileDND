@@ -1,0 +1,12 @@
+.bottomBarHolder {
+    width: 100vw;
+    height: 5vh;
+    top: 95vh;
+    left: 0;
+    border-top: solid 3px white;
+    position: fixed;
+    text-align: center;
+    background-color: #2979ff;
+    color: white;
+    padding-top: 10px;
+}

@@ -1,0 +1,45 @@
+.loginHolder {
+    width: 100vw;
+    left: 0;
+    top: 0;
+}
+
+.loginFieldsHolder {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    width: 50%;
+    border: solid 3px #2979ff;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+}
+
+.inputFieldLogin {
+    width: 95% !important;
+    margin-left: 2.5%;
+    margin-bottom: 25px;
+    margin-top: -10px;
+}
+
+.loginInputTitle {
+    margin-left: 5%;
+    margin-top: 5px;
+}
+
+.loginInputTopTitle {
+    text-align: center !important;
+    margin-top: 20vh;
+    margin-bottom: 15px;
+    font-size: 55px;
+}
+
+.loginButton {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 50vw !important;
+    margin-top: 15px;
+    max-width: 500px;
+}

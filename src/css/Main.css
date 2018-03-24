@@ -1,0 +1,31 @@
+.loginScreenHolder {
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+
+.loginBackgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -500;
+}
+
+@font-face { font-family: AvenirBook; src: url("../fonts/AvenirBook.otf") format('opentype');}
+@font-face { font-family: AvenirLight; src: url("../fonts/AvenirLight.otf") format('opentype');}
+@font-face { font-family: AvenirRoman; src: url("../fonts/AvenirRoman.otf") format('opentype');}
+
+/* Defining classes so allow us to change the font types easily */
+.fontBook { font-family: AvenirBook !important;}
+.fontRoman { font-family: AvenirRoman !important;}
+.fontLight { font-family: AvenirLight !important;}
+
+/* Setting default font for entire platform */
+* {
+    font-family: AvenirRoman !important;
+}

@@ -1,0 +1,17 @@
+.toolbarEmpty {
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 8vh;
+    border-bottom: solid 3px white;
+    background-color: #2979ff;
+}
+
+.spectreLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    height: 7vh;
+    min-width: 30%;
+}
