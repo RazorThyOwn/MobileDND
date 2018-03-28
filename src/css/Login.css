@@ -9,11 +9,13 @@
     margin-left: auto;
     margin-right: auto;
     background-color: white;
-    width: 50%;
+    min-width: 50px;
     border: solid 3px #2979ff;
     padding-left: 35px;
     padding-right: 35px;
     padding-top: 15px;
+    width: 50%;
+    max-width: 400px;
 }
 
 .inputFieldLogin {
@@ -24,8 +26,9 @@
 }
 
 .loginInputTitle {
-    margin-left: 5%;
-    margin-top: 5px;
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 .loginInputTopTitle {
@@ -42,4 +45,20 @@
     width: 50vw !important;
     margin-top: 15px;
     max-width: 500px;
+}
+
+.missingCredentialsTitle {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.loginMissingTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.loginMissingInfo {
+
 }

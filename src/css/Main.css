@@ -29,3 +29,13 @@
 * {
     font-family: AvenirRoman !important;
 }
+
+.viewTitle {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 3vh;
+}
+
+.viewTitleIcon {
+    transform: scale(1.1) !important;
+}
