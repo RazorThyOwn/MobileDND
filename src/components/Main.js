@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import Toolbar from './Toolbar';
 import Login from './Login'
 import HomeView from './views/HomeView';
+import EventManagementView from './views/EventManagementView';
 import BottomBar from './BottomBar';
 
 // Importing CSS
@@ -54,6 +55,7 @@ export default class Main extends React.Component {
                 <div className = "loginScreenHolder">
                     <Toolbar setActiveIndex = {this.setActiveIndex} logOut = {this.logOut} active_index = {this.state.active_index} token = {this.state.token} user_name = {this.state.user_name} />
                     <HomeView index = {0} active_index = {this.state.active_index} token = {this.state.token} user_name = {this.state.user_name} />
+                    <EventManagementView index = {4} active_index = {this.state.active_index} token = {this.state.token} user_name = {this.state.user_name} />
                     <BottomBar />
                 </div>
             );

@@ -11,6 +11,9 @@ import Dialog from 'material-ui/Dialog';
 // Importing CSS
 import '../css/Login.css';
 
+// Loading AXIOS
+import axios from 'axios';
+
 export default class Login extends React.Component {
 
     constructor(props) {
@@ -102,40 +105,63 @@ export default class Login extends React.Component {
 
         // TODO:
         // AXIOS Request to database to search for password
-        let auth_token = "123";
+        axios.post(`http://13.56.163.208/api/user/user.php`, {
+            method: "GET",
+            user_name: this.state.local_login,
+            password: this.state.local_password
+        }).then(resp => {
+            let auth_token = null;
 
-        // We have retrieved information regarding this account
-        // Check to see if got valid account information
-        if (auth_token === null) {
-            // Opening the dialog box
-            this.setState({dialog_open: true});
-        }
+            // Grabbing data from the account response
+            let data = resp.data;
+            if (data.auth_token !== undefined) {
+                auth_token = data.auth_token;
+            }
 
-        else {
-            // Sweet, valid account credentials!
-            // Lets set this in the main view and load into the next page
-            this.props.handleLoginCallback(this.state.local_login, auth_token);
-        }
+            // We have retrieved information regarding this account
+            // Check to see if got valid account information
+            if (auth_token === null) {
+                // Opening the dialog box
+                this.setState({dialog_open: true});
+            }
+
+            else {
+                // Sweet, valid account credentials!
+                // Lets set this in the main view and load into the next page
+                this.props.handleLoginCallback(this.state.local_login, auth_token);
+            }
+        });
     }
 
     createAccount() {
         // Closing dialog
         this.setState({dialog_open: false});
 
-        // Creating a new account...
-        let auth_token = null;
+        axios.post(`http://13.56.163.208/api/user/user.php`, {
+            method: "POST",
+            user_name: this.state.local_login,
+            password: this.state.local_password
+        }).then(resp => {
+            // Creating a new account...
+            let auth_token = null;
 
-        // Okay we have created the new account!
-        // We should now load the new account data into the system and load the next page
+            console.log(resp);
+            if (resp.data.length > 32) {
+                auth_token = resp.data;
+            }
 
-        if (auth_token === null) {
-            // Username already taken, thats too bad
+            // Okay we have created the new account!
+            // We should now load the new account data into the system and load the next page
 
-            // TODO: Turn alert into Dialog for better user experience
-            alert("That username is already taken!");
-        }
-        else {
-            this.props.handleLoginCallback(this.state.local_login, auth_token);
-        }
+            if (auth_token === null) {
+                // Username already taken, that's too bad
+
+                // TODO: Turn alert into Dialog for better user experience
+                alert("That username is already taken!");
+            }
+            else {
+                this.props.handleLoginCallback(this.state.local_login, auth_token);
+            }
+        });
     }
 }

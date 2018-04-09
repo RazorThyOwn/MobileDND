@@ -1,0 +1,42 @@
+.homeViewHolder {
+    width: 100%;
+    background-color: #efefef;
+    height: 87vh;
+}
+
+.home_welcomeBack {
+    text-align: center !important;
+    font-size: 4vh;
+    padding-top: 5px;
+}
+
+.noPast {
+    text-align: center !important;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.currentGameTitle , .pastGameTitle {
+    text-align: center !important;
+    font-size: 3vh;
+    margin-top: 15vh;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+ }
+
+.createEventButton {
+    text-align: center !important;
+}
+
+.viewTitleAdd {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 3vh;
+}
+
+.createEventButton {
+    width: 30vw;
+    margin-left: 35vw;
+    margin-top: 25px;
+}
